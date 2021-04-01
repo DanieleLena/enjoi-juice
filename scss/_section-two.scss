@@ -1,0 +1,41 @@
+.section-two {
+    width: 100%;
+    height: 100vh;
+    // background-color: coral;
+    border: 3px solid red;
+    position: static;
+    display: flex;
+   
+}
+
+.left-side {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    
+}
+.circle {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+    
+    p {
+        width: 50%;
+        height: 50%;
+        font-size: 5vw;
+        text-transform: uppercase;
+    }
+}
+
+.right-side {
+    width: 50%;
+    height: 100%;
+    // background-color: salmon;
+}
