@@ -5,6 +5,7 @@ let renderer;
 let scene;
 let object;
 let rightsidePosition = (window.innerWidth * 4.50)/100;
+let vh;
 
 function init(){
     container = document.querySelector(".scene");
@@ -53,6 +54,9 @@ function init(){
         
 
   // SCROLLING ANIMATION
+
+  vh = (unit) => window.innerHeight * (unit/100);
+
 gsap.registerPlugin(ScrollTrigger);
 
 let tl = gsap.timeline();
@@ -60,36 +64,39 @@ let tl = gsap.timeline();
 tl.to(object.position,{x: 1, ease: "power1.inOut", scrollTrigger: {
       
     start: "top top",
-    end: "10%",
+    end: vh(100),
     scrub: 1,
     
   }});
-  tl.to(object.rotation,{z: -6.3, ease: "power1.inOut", scrollTrigger: {
+  tl.to(object.rotation,{z: -3, ease: "power1.inOut", scrollTrigger: {
       
-    start: "20%",
-    end: "50%",
+    start: vh(100),
+    end: vh(200),
     scrub: 1,
     
   }});
-  tl.to(object.rotation,{y: 6.3, ease: "power1.inOut", scrollTrigger: {
+  tl.to(object.rotation,{z:-6, ease: "power1.inOut", scrollTrigger: {
       
-    start: "60%",
-     end: "100%",
+    start: vh(199),
+     end: vh(800),
     scrub: 1,
     
+    
   }});
-  tl.to(object.rotation,{x: 6.3, ease: "power1.inOut", scrollTrigger: {
+  tl.to("#prova",{ opacity: 3, scale: 1, ease: "power1.inOut", scrollTrigger: {
       
-    start: "110%",
-     end: "200%",
+    start: vh(400),
+     end: vh(700),
     scrub: 1,
-    
+  }});
+  tl.to("body",{ background: " linear-gradient(to right, #4A00E0, #8E2DE2) ", ease: "power1.inOut", scrollTrigger: {
+      
+    start: vh(400),
+     end: vh(401),
+    scrub: 1,
   }});
 
 
-
-
-    
         
     });
 
@@ -98,8 +105,10 @@ tl.to(object.position,{x: 1, ease: "power1.inOut", scrollTrigger: {
 
 function animate(){
     requestAnimationFrame(animate);    
-    // car.position.x += 0.015;
     
+    //prova====
+    vh = (unit) => window.innerHeight * (unit/100);
+    //========
 
     renderer.render(scene,camera);
 }
@@ -113,23 +122,20 @@ function onWindowResize(){
 
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
+    
+    
 
 
     renderer.setSize(container.clientWidth,container.clientHeight);
     // POSITION ON THE RIGHT
-     rightsidePosition = (window.innerWidth * 4.50)/100;
-    object.position.x = rightsidePosition;
+    //  rightsidePosition = (window.innerWidth * 4.50)/100;
+    // object.position.x = rightsidePosition;
 
 
 }
 window.addEventListener("resize", onWindowResize);
 
 
-const btn = document.querySelector(".btn");
-
-btn.addEventListener("click", function(){
-    
-});
 
 
 // window.addEventListener("scroll", ()=> {

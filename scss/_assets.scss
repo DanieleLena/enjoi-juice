@@ -1,0 +1,52 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+
+}
+:root {
+    --orange : #F37335;
+    --yellow: #FDC830;
+    --gradient: 
+    linear-gradient(to left , var(--orange),var(--yellow) );  /* Chrome 10-25, Safari 5.1-6 */
+
+    --backgroundTrick: var(--gradient);
+    --font-rounded:'M PLUS Rounded 1c', sans-serif;
+
+     
+}
+
+a:link,
+a:visited ,
+a:hover ,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+// the WHITE BUTTON
+
+.btn {
+    
+    background-color: transparent;
+    padding: .5rem 2rem;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: background-color .5s;
+
+    &:hover {
+        background-color: white;
+        color: black;
+
+    }
+
+}   
+

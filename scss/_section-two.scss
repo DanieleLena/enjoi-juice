@@ -1,22 +1,21 @@
 .section-two {
     width: 100%;
-    height: 100vh;
-    // background-color: coral;
-    border: 3px solid red;
+    height: 120vh;
     position: static;
-    display: flex;
+    
    
 }
 
-.left-side {
+.section-two-left-side {
     width: 50%;
     height: 100%;
     position: absolute;
     
+    
 }
 .circle {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     border-radius: 50%;
     border: 2px solid white;
@@ -30,12 +29,38 @@
         width: 50%;
         height: 50%;
         font-size: 5vw;
+        margin-left: 6vw;
         text-transform: uppercase;
     }
 }
 
-.right-side {
+.section-two-right-side {
     width: 50%;
     height: 100%;
-    // background-color: salmon;
+    position: relative;
+    left: 50%;
+    // background-color: yellow;
+}
+
+.section-two-text-container {
+    width: 50%;
+    height: 30vh;
+    position: relative;
+    top: 40%;
+    margin: auto;
+    font-family: var(--font-rounded);
+    padding: 5px;
+
+    h3 {
+        font-family: inherit;
+        font-size: 3.3vw;
+        line-height: 2.8vw;
+        margin: 15px 0;
+    }
+    p {
+        font-size: 1.5vw;
+        line-height: 1.2;
+        margin-bottom: 15px;
+
+    }
 }
