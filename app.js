@@ -41,8 +41,11 @@ function init(){
 
     //Load model
     let loader = new THREE.GLTFLoader();
-      loader.load("3d/Juice/scene.gltf", function(gltf){
+      // loader.load("3d/Juice/scene.gltf", function(gltf){
       
+       loader.load("https://enjoi-juice-l8to8b8il-lennyman.vercel.app/3D/Juice/scene.gltf", function(gltf){
+
+        
  
         scene.add(gltf.scene);
         object = gltf.scene.children[0];
