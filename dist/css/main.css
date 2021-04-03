@@ -147,13 +147,23 @@ a:active {
   z-index: -50;
 }
 
+.section-four-sticky-cotainer {
+  width: 100%;
+  height: 120vh;
+  position: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1vh;
+  border: 8px solid black;
+}
+
 .section-four-left-side {
   width: 40%;
   height: 100vh;
   margin-left: 2.5vw;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0vh;
 }
 
 .section-four-left-side h3 {
@@ -204,25 +214,15 @@ a:active {
 }
 
 .third-fruit {
-  position: -webkit-sticky;
-  position: sticky;
+  position: relative;
   width: 400px;
-  top: 4vh;
-  left: 150vh;
-  opacity: 0.2;
-  -webkit-transform: scale(0.2);
-          transform: scale(0.2);
 }
 
 .fourth-fruit {
-  position: -webkit-sticky;
-  position: sticky;
+  position: relative;
   width: 400px;
-  top: 4vh;
-  left: 150vh;
-  opacity: 0.2;
-  -webkit-transform: scale(0.2);
-          transform: scale(0.2);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 body {

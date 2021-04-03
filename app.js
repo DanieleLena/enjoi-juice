@@ -41,8 +41,8 @@ function init(){
 
     //Load model
     let loader = new THREE.GLTFLoader();
-    loader.load("./3d/Juice/scene.gltf", function(gltf){
-
+      loader.load("3d/Juice/scene.gltf", function(gltf){
+      
  
         scene.add(gltf.scene);
         object = gltf.scene.children[0];
@@ -83,10 +83,10 @@ tl.to(object.position,{x: 1, ease: "power1.inOut", scrollTrigger: {
     
     
   }});
-  tl.to("#prova",{ opacity: 3, scale: 1, ease: "power1.inOut", scrollTrigger: {
+  tl.to("#elder2",{ opacity: 3, scale: 1.8, opacity: 0, ease: "power1.inOut", scrollTrigger: {
       
     start: vh(400),
-     end: vh(700),
+     end: vh(650),
     scrub: 1,
   }});
   tl.to("body",{ background: " linear-gradient(to right, #4A00E0, #8E2DE2) ", ease: "power1.inOut", scrollTrigger: {

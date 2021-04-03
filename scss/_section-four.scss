@@ -7,14 +7,23 @@
 }
 
 
-
+.section-four-sticky-cotainer {
+    width: 100%;
+    height: 120vh;
+    position: block;
+    display: flex;
+    position: sticky;
+    top: 1vh;
+    
+  
+    border: 8px solid black;
+}
 
 .section-four-left-side {
 width: 40%;
 height: 100vh;
 margin-left: 2.5vw;
-position: sticky;
-    top: 0vh;
+
 
     
 
@@ -72,21 +81,18 @@ position: sticky;
 .second-fruit {
     position: relative;
     width: 300px;
+    // opacity: 0.2;
  
 }
     .third-fruit {
-    position: sticky;
+    position: relative;
     width: 400px;
-    top: 4vh;
-    left: 150vh;
-    opacity: 0.2;
-    transform: scale(0.2);
+;
 } 
 .fourth-fruit {
-    position: sticky;
+    position: relative;
     width: 400px;
-    top: 4vh;
-    left: 150vh;
-    opacity: 0.2;
-    transform: scale(0.2);
+    filter: blur(3px);
+
+
 }
