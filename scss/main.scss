@@ -10,8 +10,18 @@
 body {
     font-family: sans-serif;
     //  overflow: hidden; 
-    background-image: var(--backgroundTrick);
+    overflow-x: hidden;
+    background: var(--backgroundTrick);
     // height: 1000vh;
+    color: white;
+}
+
+// FOR THE SCROLLING ANIMATION =============================================================================
+.purple-background {
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+}
+.zinc-background {
+    
 }
 
 .scene, canvas {
@@ -31,7 +41,7 @@ body {
 
 .landing-page {
     width: 100%;
-    height: 150vh;
+    height: 130vh;
     position: static;
     font-size: 2rem;
     text-align: center;
@@ -128,7 +138,7 @@ line-height: 2vw;
 }
 .vertical-line {
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     position: relative;
     top: 90vh;
     z-index: -2;
@@ -139,6 +149,6 @@ line-height: 2vw;
 .section-five {
     width: 100%;
     height: 100vh;
-    background-color:cadetblue;
+    // background-color:cadetblue;
     position: static;
 }
