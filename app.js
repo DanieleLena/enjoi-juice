@@ -122,6 +122,15 @@ let tl = gsap.timeline()
      end: vh(426),
     scrub: 1,
   }})
+   //fonts
+   .to(".section-four",{ ease: "power1.inOut", scrollTrigger: {
+
+    toggleClass: {targets: ".section-four", className: "orange-text"},
+    start: vh(426),
+     end: vh(624),
+    scrub: 1,
+    
+  }})
   //ORANGES FADE-IN
   .to("#orange1",{ scale: 1.8, opacity: 100, ease: "power1.inOut", scrollTrigger: {
       
@@ -178,7 +187,7 @@ let tl = gsap.timeline()
   //ZINK ===================================================================================
 
   //BACKGROUND WHITE
-  .to("body",{ background: "linear-gradient(95deg, #e2e8f0, #fff, #e2e8f0)", ease: "power1.inOut", scrollTrigger: {
+  .to("body",{ background: "linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4)", ease: "power1.inOut", scrollTrigger: {
 
     start: vh(625),
      end: vh(625),
@@ -187,7 +196,7 @@ let tl = gsap.timeline()
   //fonts
   .to(".section-four",{ ease: "power1.inOut", scrollTrigger: {
 
-    toggleClass: {targets: ".section-four", className: "black-theme"},
+    toggleClass: {targets: ".section-four", className: "zinc-text"},
     start: vh(625),
      end: vh(1500),
     scrub: 1,

@@ -8,6 +8,7 @@
 :root {
   --orange: #F37335;
   --yellow: #FDC830;
+  --custom-black: #0D0D0D;
   --gradient: 
     linear-gradient(to left , var(--orange),var(--yellow) );
   /* Chrome 10-25, Safari 5.1-6 */
@@ -38,6 +39,31 @@ a:active {
 .btn:hover {
   background-color: white;
   color: black;
+}
+
+.big-title {
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  left: 0;
+  font-size: 13.9vw;
+  margin-left: 2vw;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 11vw;
+  letter-spacing: -1vw;
+  font-weight: 800;
+  z-index: -2;
+}
+
+.big-title span {
+  font-family: var(--font-rounded);
+  position: absolute;
+  top: 15vw;
+  left: 5vw;
+  font-size: 1vw;
+  line-height: 1vw;
+  letter-spacing: 0;
 }
 
 .section-two {
@@ -114,30 +140,6 @@ a:active {
   position: static;
 }
 
-.title-section-three {
-  width: 100%;
-  height: 80vh;
-  position: absolute;
-  left: 0;
-  font-size: 13.9vw;
-  margin-left: 2vw;
-  text-transform: uppercase;
-  text-align: left;
-  line-height: 11vw;
-  letter-spacing: -1vw;
-  font-weight: 800;
-  z-index: -2;
-}
-
-.title-section-three span {
-  position: absolute;
-  top: 15vw;
-  left: 5vw;
-  font-size: 1vw;
-  line-height: 1vw;
-  letter-spacing: 0;
-}
-
 .section-four {
   width: 100%;
   height: 1000vh;
@@ -208,20 +210,29 @@ a:active {
   font-size: .8vw;
 }
 
-.black-theme {
+.orange-text span:nth-child(1), .orange-text span:nth-child(3) {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+
+.orange-text span:nth-child(2) {
+  color: white;
+}
+
+.zinc-text {
   color: black;
 }
 
-.black-theme li {
+.zinc-text li {
   border-bottom: 1px solid black;
 }
 
-.black-theme span:nth-child(1), .black-theme span:nth-child(2) {
+.zinc-text span:nth-child(1), .zinc-text span:nth-child(2) {
   color: transparent;
   -webkit-text-stroke: 1px black;
 }
 
-.black-theme span:nth-child(3) {
+.zinc-text span:nth-child(3) {
   color: black;
   -webkit-text-stroke: 0;
 }
@@ -271,6 +282,27 @@ a:active {
 .zinc {
   opacity: 0;
   width: 200px;
+}
+
+.section-five {
+  width: 100%;
+  height: 130vh;
+  position: static;
+}
+
+.section-five h1 {
+  margin-top: 20vh;
+  color: var(--custom-black);
+  font-size: 12vw;
+  line-height: 9.5vw;
+}
+
+.section-five h1 span {
+  left: 70vw;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -412,11 +444,5 @@ body {
   position: relative;
   top: 90vh;
   z-index: -2;
-}
-
-.section-five {
-  width: 100%;
-  height: 100vh;
-  position: static;
 }
 /*# sourceMappingURL=main.css.map */

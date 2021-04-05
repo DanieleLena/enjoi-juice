@@ -75,7 +75,20 @@ position: sticky;
         
 }
 
-.black-theme {
+.orange-text {
+    span:nth-child(1), span:nth-child(3) {
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+    }
+    span:nth-child(2) {
+        color: white;
+     
+
+    }
+
+}
+
+.zinc-text {
     color: black;
 
     li {

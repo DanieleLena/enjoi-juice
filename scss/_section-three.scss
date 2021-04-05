@@ -1,30 +1,7 @@
+
 .section-three {
     width: 100%;
     height:80vh;
     position: static;
 }
 
-.title-section-three {
-
-        width: 100%;
-        height: 80vh;
-        position: absolute;
-        left: 0;
-        font-size: 13.9vw;
-        margin-left: 2vw;
-        text-transform: uppercase;
-        text-align: left;
-        line-height:11vw;
-        letter-spacing: -1vw;
-        font-weight: 800;
-        z-index: -2;
-    
-    span {
-        position: absolute;
-        top: 15vw;
-        left: 5vw;
-        font-size: 1vw;
-        line-height: 1vw;
-        letter-spacing: 0;
-    }
-}
