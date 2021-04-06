@@ -4,11 +4,13 @@ let camera;
 let renderer;
 let scene;
 let object;
-let rightsidePosition = (window.innerWidth * (4.50/100));
+let rightsidePosition = (window.innerWidth *5) / 100;
 let vh = (unit) => window.innerHeight * (unit/100);
 
 function init(){
-    container = document.querySelector(".scene");
+    container = document.querySelector(".scene");   
+  
+    
 
     //Create scene
     scene = new THREE.Scene();
@@ -48,6 +50,7 @@ function init(){
         
  
         scene.add(gltf.scene);
+        
         object = gltf.scene.children[0];
         animate();
 
@@ -82,7 +85,7 @@ let tl = gsap.timeline()
   .to(object.rotation,{z:-20, ease: "power1.inOut", scrollTrigger: {
       
     start: vh(250),
-     end: vh(1500),
+    //  end: vh(),
     scrub: 1,
     
     
@@ -254,20 +257,38 @@ let tl = gsap.timeline()
      end: vh(1100),
     scrub: 1,
   }})
+  //END FRUITS SCROLLING =============================================================================
+
+  //PARALLAX REVIEWS =================================================================================
+  gsap.utils.toArray(".card").forEach(card => {
+    const speed = card.dataset.speed * 100;
+    console.log(speed);
+    tl.to(card, { y: `${speed}`, ease: "none", scrollTrigger: {
+      trigger: ".section-six-cards-right",
+    
+      start: "top top",
+       end: "bottom top",
+      scrub: 1,
+  
+  }});
+
+});
+
  
 
 
-        
     });
 
-    
+  
+  
+   
 }
 
 function animate(){
     requestAnimationFrame(animate);    
   
     renderer.render(scene,camera);
-   
+
     
     
 }

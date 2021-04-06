@@ -3,6 +3,10 @@
 @import "section-three";
 @import "section-four";
 @import "section-five";
+@import "section-six";
+@import "section-seven-footer";
+
+
 
 
 
@@ -12,9 +16,11 @@ html {
 }
 
 body {
+  
+    width: 100vw;
     font-family: sans-serif;
     //  overflow: hidden; 
-    overflow-x: hidden;
+    // overflow-x: hidden;
     background: var(--backgroundTrick);
     // height: 1000vh;
     color: white;
