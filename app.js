@@ -191,9 +191,10 @@ let tl = gsap.timeline()
 
   //BACKGROUND WHITE
   .to("body",{ background: "linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4)", ease: "power1.inOut", scrollTrigger: {
-
+    
+    toggleClass: {targets: "body", className: "zinc-background"},
     start: vh(625),
-     end: vh(625),
+     end: vh(1319),
     scrub: 1,
   }})
   //fonts
@@ -257,9 +258,40 @@ let tl = gsap.timeline()
      end: vh(1100),
     scrub: 1,
   }})
-  //END FRUITS SCROLLING =============================================================================
+    //END FRUITS SCROLLING =============================================================================
 
-  //PARALLAX REVIEWS =================================================================================
+
+    //BLOCK THE OBJECT BEFORE THE FOOTER  =============================================================================
+
+  .to(".scene",{position:"absolute", top: `${vh(1280)}`, ease: "power1.inOut", scrollTrigger: {
+      
+    start: vh(1300),
+      end: vh(1300),
+    scrub: true,    
+  }})
+//"linear-gradient(to left , var(--orange),var(--yellow) )"
+  //CHANGE BODY BACKGROUND BACK TO ORANGE GRADIENT ===============================================================
+  .to("body",{background:"red",  ease: "power1.inOut", scrollTrigger: {
+      
+    start: vh(1320),
+      end: vh(1320),
+    scrub: true,    
+  }})
+  //CHANGE THE REVIEWS CARD SECTION COLORS FOR THE ORANGE BACKGROUND ========================================================
+  .to(".card", {color: "white",border: "solid 3px white", ease: "power1.inOut",scrollTrigger: {
+      
+    start: vh(1320),
+      end: vh(1320),
+    scrub: true,    
+  }})
+  .to(".card-top", {color: "white",borderBottom: "solid 3px white", ease: "power1.inOut",scrollTrigger: {
+      
+    start: vh(1320),
+      end: vh(1320),
+    scrub: true,    
+  }})
+
+  //PARALLAX REVIEWS SECTION =================================================================================
   gsap.utils.toArray(".card").forEach(card => {
     const speed = card.dataset.speed * 100;
     console.log(speed);

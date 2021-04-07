@@ -142,7 +142,7 @@ a:active {
 
 .section-four {
   width: 100%;
-  height: 1000vh;
+  height: 700vh;
   position: static;
   z-index: -50;
 }
@@ -435,9 +435,8 @@ a:active {
 
 .section-seven-footer {
   width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: orange;
+  height: 110vh;
+  position: absolute;
   overflow-x: hidden;
 }
 
@@ -534,6 +533,40 @@ a:active {
   }
 }
 
+.call-action-footer {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 20vh;
+  z-index: 1;
+  padding-top: 5vw;
+}
+
+.arrow-btn {
+  width: 10vw;
+  height: 10vw;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3rem;
+  position: absolute;
+  top: 18vw;
+  right: 18vw;
+}
+
+.arrow-btn i {
+  width: 100%;
+  height: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -550,7 +583,11 @@ body {
   background: linear-gradient(to right, #4A00E0, #8E2DE2);
 }
 
-.scene, canvas {
+.zinc-background {
+  background: linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4);
+}
+
+.scene {
   width: 100%;
   height: 100vh;
   position: fixed;
