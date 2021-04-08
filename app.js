@@ -60,7 +60,7 @@ function init(){
         
 
   // SCROLLING ANIMATION
-
+  
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,26 +90,26 @@ let tl = gsap.timeline()
     
     
   }})
-  .to("#elder1",{  scale: 1.8, opacity: 0,  ease: "power1.inOut", scrollTrigger: {
+  .to("#elder1",{  scale: 1.8, opacity: 0, rotate: "20deg", ease: "power1.inOut", scrollTrigger: {
       
     start: vh(300),
      end: vh(325),
     scrub: 1,
   }})
   
-  .to("#elder2",{  scale: 1.8, opacity: 0, ease: "power1.inOut", scrollTrigger: {
+  .to("#elder2",{  scale: 1.8, opacity: 0, rotate: "20deg", ease: "power1.inOut", scrollTrigger: {
       
     start: vh(326),
      end: vh(350),
     scrub: 1,
   }})
-  .to("#elder3",{  scale: 1.8, opacity: 0, ease: "power1.inOut", scrollTrigger: {
+  .to("#elder3",{  scale: 1.8, opacity: 0, rotate: "20deg", ease: "power1.inOut", scrollTrigger: {
       
     start: vh(351),
      end: vh(375),
     scrub: 1,
   }})
-  .to("#elder4",{ scale: 1.8, opacity: 0, ease: "power1.inOut", scrollTrigger: {
+  .to("#elder4",{ scale: 1.8, opacity: 0, rotate: "20deg", ease: "power1.inOut", scrollTrigger: {
       
     start: vh(401),
      end: vh(425),
@@ -119,8 +119,7 @@ let tl = gsap.timeline()
   //ORANGES ===================================================================================
 
   //BACKGROUD PURPLE
-  
-  .to("body",{ background: "linear-gradient(to right, #4A00E0, #8E2DE2)", ease: "power1.inOut",scrollTrigger: {
+  .to("body",{ background: "linear-gradient(to right, #4A00E0, #8E2DE2)", ease: "none",scrollTrigger: {
     start: vh(426),
      end: vh(426),
     scrub: 1,
@@ -131,28 +130,28 @@ let tl = gsap.timeline()
     toggleClass: {targets: ".section-four", className: "orange-text"},
     start: vh(426),
      end: vh(624),
-    scrub: 1,
+    // scrub: 1,
     
   }})
   //ORANGES FADE-IN
-  .to("#orange1",{ scale: 1.8, opacity: 100, ease: "power1.inOut", scrollTrigger: {
+  .to("#orange1",{ scale: 1.8, opacity: 100,rotate: "20deg", ease: "power1.inOut", scrollTrigger: {
       
     start: vh(427),
      end: vh(450),
     scrub: 1,
   }})
-  .to("#orange2",{ scale: 2, opacity: 100, ease: "power1.inOut", scrollTrigger: {
+  .to("#orange2",{ scale: 2, opacity: 100, rotate: "90deg", ease: "power1.inOut", scrollTrigger: {
       
     start: vh(451),
      end: vh(475),
     scrub: 1,
-  }}).to("#orange3",{ scale: 1.8, opacity: 100, ease: "power1.inOut", scrollTrigger: {
+  }}).to("#orange3",{ scale: 1.8, opacity: 100, rotate: "20deg",ease: "power1.inOut", scrollTrigger: {
       
     start: vh(476),
      end: vh(500),
     scrub: 1,
   }})
-  .to("#orange4",{ scale: 1.8, opacity: 100, ease: "power1.inOut", scrollTrigger: {
+  .to("#orange4",{ scale: 1.8, opacity: 100, rotate: "30deg",ease: "power1.inOut", scrollTrigger: {
       
     start: vh(501),
      end: vh(525),
@@ -160,27 +159,27 @@ let tl = gsap.timeline()
   }})
   //ORANGES FADE-OUT
   .from("#orange1",{ scale: 1.8, opacity: 100, ease: "power1.inOut"})
-  .to("#orange1",{ scale: 3.5, opacity: 0, ease: "power1.inOut", scrollTrigger: {
+  .to("#orange1",{ scale: 3, opacity: 0, ease: "power1.inOut", scrollTrigger: {
       
     start: vh(526),
      end: vh(550),
     scrub: 1,
   }})
   .from("#orange2",{ scale: 1.8, opacity: 100, ease: "power1.inOut"})
-  .to("#orange2",{ scale: 3.5, opacity: 0, ease: "power1.inOut", scrollTrigger: {
+  .to("#orange2",{ scale: 2.6, opacity: 0, ease: "power1.inOut", scrollTrigger: {
       
     start: vh(551),
      end: vh(575),
     scrub: 1,
   }})
   .from("#orange3",{ scale: 1.8, opacity: 100, ease: "power1.inOut"})
-  .to("#orange3",{ scale: 3.5, opacity: 0, ease: "power1.inOut", scrollTrigger: {
+  .to("#orange3",{ scale: 3, opacity: 0, ease: "power1.inOut", scrollTrigger: {
       
     start: vh(576),
      end: vh(600),
     scrub: 1,
   }}).from("#orange4",{ scale: 1.8, opacity: 100, ease: "power1.inOut"})
-  .to("#orange4",{ scale: 3.5, opacity: 0, ease: "power1.inOut", scrollTrigger: {
+  .to("#orange4",{ scale: 3, opacity: 0, ease: "power1.inOut", scrollTrigger: {
       
     start: vh(601),
      end: vh(625),
@@ -190,11 +189,12 @@ let tl = gsap.timeline()
   //ZINK ===================================================================================
 
   //BACKGROUND WHITE
-  .to("body",{ background: "linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4)", ease: "power1.inOut", scrollTrigger: {
+  // .from("body",{ background: "linear-gradient(to left , var(--orange),var(--yellow) )", ease: "none"})
+  .to("body",{ background: "linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4)", ease: "none", scrollTrigger: {
     
-    toggleClass: {targets: "body", className: "zinc-background"},
+    // toggleClass: {targets: "body", className: "zinc-background"},
     start: vh(625),
-     end: vh(1319),
+     end: vh(625),
     scrub: 1,
   }})
   //fonts
@@ -207,24 +207,24 @@ let tl = gsap.timeline()
     
   }})
   // ZINC FADE-IN
-  .to("#zinc1",{ scale: 1.8, opacity: 100, ease: "power1.inOut", scrollTrigger: {
+  .to("#zinc1",{ scale: 1.8, opacity: 100, rotate: "90deg",ease: "power1.inOut", scrollTrigger: {
       
     start: vh(626),
      end: vh(650),
     scrub: 1,
   }})
-  .to("#zinc2",{ scale: 2, opacity: 100, ease: "power1.inOut", scrollTrigger: {
+  .to("#zinc2",{ scale: 2, opacity: 100, rotate: "30deg", ease: "power1.inOut", scrollTrigger: {
       
     start: vh(651),
      end: vh(675),
     scrub: 1,
-  }}).to("#zinc3",{ scale: 1.8, opacity: 100,x: 300, ease: "power1.inOut", scrollTrigger: {
+  }}).to("#zinc3",{ scale: 1.8, opacity: 100,rotate: "50deg", ease: "power1.inOut", scrollTrigger: {
       
     start: vh(676),
      end: vh(700),
     scrub: 1,
   }})
-  .to("#zinc4",{ scale: 1.8, opacity: 100,  ease:"power1.inOut", scrollTrigger: {
+  .to("#zinc4",{ scale: 1.8, opacity: 100,rotate: "120deg",  ease:"power1.inOut", scrollTrigger: {
       
     start: vh(701),
      end: vh(725),
@@ -245,7 +245,7 @@ let tl = gsap.timeline()
      end: vh(1050),
     scrub: 1,
   }})
-  .from("#zinc3",{ scale: 1.8, opacity: 100, x:300, ease: "power1.inOut"})
+  .from("#zinc3",{ scale: 1.8, opacity: 100, ease: "power1.inOut"})
   .to("#zinc3",{ scale: 3.5, opacity: 0, ease: "power1.inOut", scrollTrigger: {
       
     start: vh(1051),
@@ -263,15 +263,18 @@ let tl = gsap.timeline()
 
     //BLOCK THE OBJECT BEFORE THE FOOTER  =============================================================================
 
-  .to(".scene",{position:"absolute", top: `${vh(1280)}`, ease: "power1.inOut", scrollTrigger: {
+  .to(".scene",{position:"absolute", top: `${vh(1290)}`, ease: "power1.inOut", scrollTrigger: {
       
     start: vh(1300),
       end: vh(1300),
     scrub: true,    
   }})
+  
 //"linear-gradient(to left , var(--orange),var(--yellow) )"
   //CHANGE BODY BACKGROUND BACK TO ORANGE GRADIENT ===============================================================
-  .to("body",{background:"red",  ease: "power1.inOut", scrollTrigger: {
+  let tl2 = gsap.timeline()
+  .from("body",{ background: "linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4)", ease: "power1.inOut"})
+  .to("body",{background:"linear-gradient(to left , var(--orange),var(--yellow) )",  ease: "power1.inOut", scrollTrigger: {
       
     start: vh(1320),
       end: vh(1320),
