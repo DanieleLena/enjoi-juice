@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --orange: #F37335;
+  --yellow: #FDC830;
+  --custom-black: #0D0D0D;
+  --gradient: 
+    linear-gradient(to left , var(--orange),var(--yellow) );
+  /* Chrome 10-25, Safari 5.1-6 */
+  --backgroundTrick: var(--gradient);
+  --font-rounded:'M PLUS Rounded 1c', sans-serif;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  background-color: transparent;
+  padding: .5rem 2rem;
+  font-size: 1.3rem;
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: background-color .5s;
+  transition: background-color .5s;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.big-title {
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  left: 0;
+  font-size: 13.9vw;
+  margin-left: 2vw;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 11vw;
+  letter-spacing: -1vw;
+  font-weight: 800;
+  z-index: -2;
+}
+
+.big-title span {
+  font-family: var(--font-rounded);
+  position: absolute;
+  top: 15vw;
+  left: 5vw;
+  font-size: 1vw;
+  line-height: 1vw;
+  letter-spacing: 0;
+}
+
+body {
+  background: #FFFCF4;
+  width: 100%;
+}
+
+.shop-about-btn,
+.btn {
+  color: black;
+  border-color: black;
+}
+
+.shop-about-btn a:nth-child(1),
+.btn a:nth-child(1) {
+  -webkit-box-shadow: 0px 9px 0px 0px var(--custom-black);
+  box-shadow: 0px 9px 0px 0px var(--custom-black);
+}
+
+.shop-about-btn a:hover,
+.btn a:hover {
+  -webkit-box-shadow: 0px 9px 0px 0px var(--custom-black);
+  box-shadow: 0px 9px 0px 0px var(--custom-black);
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.main-shop {
+  width: 100%;
+  height: 110vh;
+  margin: auto;
+  color: var(--custom-black);
+}
+
+.left-scene {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.scene {
+  position: absolute;
+  width: 50vw;
+  height: 90vh;
+  top: 15vh;
+  z-index: 99;
+}
+
+.orange-circle {
+  width: 90%;
+  height: 90%;
+  border: 3px solid orange;
+  border-radius: 50%;
+}
+
+.right-main-shop {
+  width: 50%;
+  height: 100%;
+  float: right;
+  padding: 3rem;
+  font-family: var(--font-rounded);
+}
+
+.right-main-shop h1 {
+  font-size: 4vw;
+  line-height: 3.5vw;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.right-main-shop p {
+  font-size: 1.3vw;
+  margin-bottom: 1rem;
+}
+
+.right-main-shop h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+  font-weight: 500;
+}
+
+.price-container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.389vw;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.price-box {
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 1rem 0;
+  cursor: pointer;
+  -webkit-transition: .2s all ease-out;
+  transition: .2s all ease-out;
+}
+
+.active-box {
+  background: linear-gradient(315.01deg, #ff710d 8.31%, #ffa800 88.22%);
+  color: white;
+  border-color: white;
+}
+
+.active-box .price-box-top {
+  border-bottom: 1px solid white;
+}
+
+.price-box-top {
+  width: 100%;
+  height: 30%;
+  border-bottom: 1px solid black;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price-box-top h3 {
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  font-weight: 200;
+}
+
+.price-box-center {
+  padding: 1.5rem;
+}
+
+.price-box-center h4 {
+  font-weight: 200;
+  font-size: 1vw;
+  margin: -10px 0;
+}
+
+.price-box-center p {
+  margin-top: 3vw;
+  font-weight: 200;
+  font-size: 0.7vw;
+}
+
+.big-btn-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.shop-big-btn {
+  width: 90%;
+  height: 3rem;
+  background: #A6A6A6;
+  color: white;
+  font-family: var(--font-rounded);
+  font-size: 1.2vw;
+  border-radius: 20px;
+}
+
+.active-big-btn {
+  background: linear-gradient(315.01deg, #ff710d 8.31%, #ffa800 88.22%);
+  color: white;
+  border-color: white;
+  cursor: pointer;
+}
+
+.hover-big-btn {
+  background: -webkit-gradient(linear, left top, right top, from(#4A00E0), to(#8E2DE2));
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+}
+/*# sourceMappingURL=shop-page.css.map */

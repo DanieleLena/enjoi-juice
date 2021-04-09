@@ -7,6 +7,28 @@
     
 }
 
+//MEDIA QUERY =========================================================================
+// 24inch
+@media screen and (min-width:1550px) {
+    .section-six {
+        height: 200vh;
+    }
+}
+//20inch
+@media screen and (min-width:1800px) {
+
+    .section-six {
+        height: 200vh;
+    }
+}
+//tablet
+@media screen and (max-width:800px) {
+
+    .section-six {
+        height: 30vh;
+    }
+}
+
 .section-six-circle {
     
         width: 50vw;

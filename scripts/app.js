@@ -63,8 +63,12 @@ function init(){
   
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.set("body", {background: "linear-gradient(to left , var(--orange),var(--yellow) )", scrollTrigger: {
+  start: "top top",
+}});
 
 let tl = gsap.timeline()
+
 .to(object.position,{x: 1, ease: "power1.inOut", scrollTrigger: {
       
     start: "top top",
@@ -260,7 +264,7 @@ let tl = gsap.timeline()
   }})
     //END FRUITS SCROLLING =============================================================================
 
-
+.set(".card", {border: "3px solid orange"})
     //BLOCK THE OBJECT BEFORE THE FOOTER  =============================================================================
 
   .to(".scene",{position:"absolute", top: `${vh(1290)}`, ease: "power1.inOut", scrollTrigger: {
@@ -273,8 +277,8 @@ let tl = gsap.timeline()
 //"linear-gradient(to left , var(--orange),var(--yellow) )"
   //CHANGE BODY BACKGROUND BACK TO ORANGE GRADIENT ===============================================================
   let tl2 = gsap.timeline()
-  .from("body",{ background: "linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4)", ease: "power1.inOut"})
-  .to("body",{background:"linear-gradient(to left , var(--orange),var(--yellow) )",  ease: "power1.inOut", scrollTrigger: {
+  .from("body",{ background: "linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4)", ease: "none"})
+  .to("body",{background:"linear-gradient(to left , var(--orange),var(--yellow) )",  ease: "none", scrollTrigger: {
       
     start: vh(1320),
       end: vh(1320),
@@ -297,7 +301,6 @@ let tl = gsap.timeline()
   //PARALLAX REVIEWS SECTION =================================================================================
   gsap.utils.toArray(".card").forEach(card => {
     const speed = card.dataset.speed * 100;
-    console.log(speed);
     tl.to(card, { y: `${speed}`, ease: "none", scrollTrigger: {
       trigger: ".section-six-cards-right",
     
@@ -343,11 +346,6 @@ function onWindowResize(){
 
     renderer.setSize(container.clientWidth,container.clientHeight);
 
-    if (container.clientWidth < 770) {
-      
-
-      
-    }
 
     // POSITION ON THE RIGHT
      rightsidePosition = (window.innerWidth * (4.50/100));

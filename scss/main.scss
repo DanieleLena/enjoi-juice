@@ -17,7 +17,7 @@ html {
 
 body {
   
-    width: 100vw;
+    width: 100%;
     font-family: sans-serif;
     //  overflow: hidden; 
     // overflow-x: hidden;
@@ -38,23 +38,26 @@ body {
     width: 100%;
     height: 90vh;
     position: fixed;
-    // position: absolute;
-    // top: 650vh;
+   
     z-index: -1;
     
 }
 
+//MEDIA QUERY =========================================================================
+// 24inch
 @media screen and (min-width:1550px) {
     .scene {
-        height: 70vh;
+        height: 73vh;
     }
 }
+//20inch
 @media screen and (min-width:1800px) {
 
     .scene {
         height: 60vh;
     }
 }
+//tablet
 @media screen and (max-width:800px) {
 
     .scene {
