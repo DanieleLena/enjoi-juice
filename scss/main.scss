@@ -26,13 +26,13 @@ body {
     color: white;
 }
 
-// FOR THE SCROLLING ANIMATION =============================================================================
-.purple-background {
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
-}
-.zinc-background {
-    background: linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4);
-}
+// // FOR THE SCROLLING ANIMATION =============================================================================
+// .purple-background {
+//     background: linear-gradient(to right, #4A00E0, #8E2DE2);
+// }
+// .zinc-background {
+//     background: linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4);
+// }
 
 .scene {
     width: 100%;
@@ -65,11 +65,20 @@ body {
     }
 }
 //SCROLL BAR =========================================
-// ::-webkit-scrollbar {
-//     display: none;    
-//   }
+::-webkit-scrollbar {
+    display: none;    
+  }
   
-
+.cart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--custom-white);
+    width: 33%;
+    height: 100%;
+    border-left: 2px solid black;
+    color: var(--custom-black);
+}
 
 
 .landing-page {

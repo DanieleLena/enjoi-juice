@@ -53,8 +53,46 @@ function init(){
         object.rotation.z = "-0.3";
 
         
+       
+
+       //GSAP 
+
+gsap.registerPlugin(ScrollTrigger);
+
+let tl = gsap.timeline();
+
+
+tl.to("body", {background: "linear-gradient(to left , var(--orange),var(--yellow) )",ease: "power1.inOut", scrollTrigger: {
+    trigger: ".faq",
+    start: "top center",
+     end: "top center ",
+    scrub: true,
+    
+}})
+.to(object.rotation, {z: 1, scrollTrigger: {
+    start: "top top",
+    end: "800",
+    scrub: 1,
+}})
+// CARDS HORIZZONTAL PARALLAX
+
+gsap.utils.toArray(".card").forEach(card => {
+    const speed = card.dataset.speed * 20;
+    
+    tl.to(card, { x: `${speed}`, ease: "none", scrollTrigger: {
+      trigger: ".shop-reviews",
+    
+      start: "top top",
+       end: "bottom top",
+      scrub: 1,
+  
+  }});
+
+});
+
+
+})
        }
-       )}
 
        
 function animate(){
@@ -131,3 +169,37 @@ bigBtn.addEventListener("mouseleave", ()=>{
         
         }
 })
+
+
+// THR TOGGLE FAQ
+
+const faqs = document.querySelectorAll(".question");
+
+
+faqs.forEach((faq)=>{
+    faq.addEventListener("click", ()=> {
+
+    let iconPlus = faq.children[0].children[1];
+       
+faqs.forEach((faq2)=>{
+    if (faq2 !== faq){
+    faq2.children[1].classList.remove("show-text");
+    //the iconPlus
+    faq2.children[0].children[1].classList.remove("rotate-icon");
+    }
+});
+ 
+    iconPlus.classList.toggle("rotate-icon");
+    faq.children[1].classList.toggle("show-text");
+    faq.scrollIntoView();
+
+    })
+})
+
+
+
+
+
+
+
+

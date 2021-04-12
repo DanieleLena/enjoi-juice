@@ -2,7 +2,7 @@
 
 body {
     // background: linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4);
-    background: #FFFCF4;
+    background: var(--custom-white);
     width: 100%;
 }
 
@@ -170,3 +170,183 @@ body {
 .hover-big-btn {
     background: linear-gradient(to right, #4A00E0, #8E2DE2);
 }
+
+
+// FAQ  SECTION==========================================================================
+
+
+.faq {
+    padding: 10vw;
+    margin: auto;
+}
+
+.faq-title {
+    font-size: 10vw;
+    margin-left: 2vw;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: -1vw;
+    font-weight: 800;
+    line-height: 11vw;
+   
+
+    span {
+        position: absolute;
+        width:300px;
+        font-size: 2vw;
+        line-height: 2vw;
+        letter-spacing: 0;
+        position: block;
+        left: 0;
+        margin-top: 6.5vw;
+        margin-left: 14vw;
+    }
+
+ 
+}
+
+
+
+article {
+
+    border-bottom: 2px solid white;
+
+
+    &:nth-child(1)  {
+        border-top: 2px solid white;
+         margin-top: 5vw;
+    }
+}
+
+.question-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 3vw;
+    line-height: 6vw;
+    text-transform: uppercase;
+    // margin-top: 1.5vw;
+    cursor: pointer;
+
+    i {
+        font-size: 5vw;
+        transition: transform .2s ease-in;
+    }
+
+}
+
+.rotate-icon {
+    transform: rotate(45deg);
+}
+
+.question-center {
+     display: flex;
+    font-family: var(--font-rounded);
+    font-size: 1vw;
+    line-height: 1.5vw;
+    transition:  max-height  .5s ease-in;
+    overflow: hidden;
+
+     max-height: 0; //TO HIDE AND OPEN WITH JS
+}
+
+.show-text{
+    max-height: 1000px;
+}
+
+.question-left-column {
+    float: left;
+
+  img {
+      width:25vw;
+      margin-top: 2.5vw;
+      margin-right: 5vw;
+  }
+}
+.question-right-column {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    
+
+    h3 {
+        margin-bottom: 2vw;
+    }
+
+  
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1vw;
+
+    h2 {
+        border-top: 2px solid white;
+        padding:1vw 0;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
+.inactive-ingredients {
+    
+    margin-left: 30vw;
+    margin-bottom: 5vw;
+}
+
+
+
+// SHOP REVIEWS SECTION ====================================================================
+.shop-reviews {
+    display: flex;
+    margin-bottom: 15vw;
+    
+}
+
+.review-little-circle {
+    width: 33vw;
+    height: 33vw;
+    position: relative;
+    left: -4vw;
+
+    border: 2px solid white;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.shop-cards {
+    display: flex;
+    align-items:flex-end
+}
+
+.card {
+    width: 20vw;
+    height: 16vw;
+    background-color: white;
+    color: black;
+    position: relative;
+    left: -7vw;
+    top: 2vw;
+
+    &:nth-child(1) {
+        transform: rotate(8deg);
+        
+    }
+    &:nth-child(2) {
+        transform: rotate(-3deg);
+       left: -5vw;
+    }
+    &:nth-child(3){
+        transform: rotate(5deg);
+        left: -2vw;
+    }
+
+}
+

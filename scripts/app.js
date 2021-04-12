@@ -127,7 +127,8 @@ let tl = gsap.timeline()
     start: vh(426),
      end: vh(426),
     scrub: 1,
-  }})
+  },
+  immediateRender: false,})
    //fonts
    .to(".section-four",{ ease: "power1.inOut", scrollTrigger: {
 
@@ -200,7 +201,7 @@ let tl = gsap.timeline()
     start: vh(625),
      end: vh(625),
     scrub: 1,
-  }})
+  },immediateRender: false,})
   //fonts
   .to(".section-four",{ ease: "power1.inOut", scrollTrigger: {
 
@@ -283,7 +284,7 @@ let tl = gsap.timeline()
     start: vh(1320),
       end: vh(1320),
     scrub: true,    
-  }})
+  },immediateRender: false,})
   //CHANGE THE REVIEWS CARD SECTION COLORS FOR THE ORANGE BACKGROUND ========================================================
   .to(".card", {color: "white",border: "solid 3px white", ease: "power1.inOut",scrollTrigger: {
       

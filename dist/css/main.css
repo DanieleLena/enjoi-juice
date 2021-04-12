@@ -8,6 +8,7 @@
 :root {
   --orange: #F37335;
   --yellow: #FDC830;
+  --custom-white:#FFFCF4;
   --custom-black: #0D0D0D;
   --gradient: 
     linear-gradient(to left , var(--orange),var(--yellow) );
@@ -305,6 +306,7 @@ a:active {
   width: 100%;
   height: 250vh;
   color: black;
+  position: static;
 }
 
 @media screen and (min-width: 1550px) {
@@ -452,8 +454,8 @@ a:active {
 
 .section-seven-footer {
   width: 100%;
-  height: 110vh;
-  position: absolute;
+  height: 100vh;
+  position: relative;
   overflow: hidden;
 }
 
@@ -554,7 +556,7 @@ a:active {
   width: 100%;
   height: auto;
   position: absolute;
-  top: 20vh;
+  top: 10vh;
   z-index: 1;
   padding-top: 5vw;
 }
@@ -588,7 +590,7 @@ footer {
   width: 100%;
   height: 20vh;
   position: absolute;
-  top: 90vh;
+  top: 80vh;
   padding: 2.5vw;
   z-index: 2;
   display: -webkit-box;
@@ -660,15 +662,6 @@ body {
   color: white;
 }
 
-.purple-background {
-  background: -webkit-gradient(linear, left top, right top, from(#4A00E0), to(#8E2DE2));
-  background: linear-gradient(to right, #4A00E0, #8E2DE2);
-}
-
-.zinc-background {
-  background: linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4);
-}
-
 .scene {
   width: 100%;
   height: 90vh;
@@ -692,6 +685,21 @@ body {
   .scene {
     height: 30vh;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--custom-white);
+  width: 33%;
+  height: 100%;
+  border-left: 2px solid black;
+  color: var(--custom-black);
 }
 
 .landing-page {
