@@ -1,3 +1,7 @@
+
+
+// 3D SCENE
+
 let container;
 let camera;
 let renderer;
@@ -191,10 +195,13 @@ faqs.forEach((faq2)=>{
  
     iconPlus.classList.toggle("rotate-icon");
     faq.children[1].classList.toggle("show-text");
-    faq.scrollIntoView();
+    // faq.scrollIntoView();
 
     })
 })
+
+
+
 
 
 

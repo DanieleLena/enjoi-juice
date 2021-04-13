@@ -5,6 +5,7 @@
 @import "section-five";
 @import "section-six";
 @import "section-seven-footer";
+@import "cart";
 
 
 
@@ -19,8 +20,8 @@ body {
   
     width: 100%;
     font-family: sans-serif;
-    //  overflow: hidden; 
-    // overflow-x: hidden;
+    // overflow: hidden; 
+    //   overflow-x:hidden;
     background: var(--backgroundTrick);
     // height: 1000vh;
     color: white;
@@ -68,17 +69,6 @@ body {
 ::-webkit-scrollbar {
     display: none;    
   }
-  
-.cart {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: var(--custom-white);
-    width: 33%;
-    height: 100%;
-    border-left: 2px solid black;
-    color: var(--custom-black);
-}
 
 
 .landing-page {

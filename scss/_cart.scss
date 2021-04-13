@@ -1,0 +1,134 @@
+  
+.cart {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    background: var(--custom-white);
+    width: 500px;
+    height: 100%;
+    border-left: 2px solid black;
+    color: var(--custom-black);
+    padding: 2vw;
+    font-family: var(--font-rounded);
+    transition: right .6s ease-in;
+     display: none;
+     z-index: 1000;
+    
+}
+.show-cart {
+    // display: block;
+    right: 0;
+}
+
+.cart-title {
+
+    width: 100%;
+    // height: 30%;
+    border-bottom: 2px solid black;
+
+    i {
+        font-size: 1.5rem;
+        cursor: pointer;
+        
+    }
+    h1 {
+        margin-top: 15px;
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: 200;
+        margin-bottom: 1vw;
+        
+    }
+}
+
+.main-cart {
+    display: flex;
+    border-bottom: 2px solid black;
+
+    img {
+        position: relative;
+        left: -2vw;
+    }
+}
+
+.right-side-cart {
+  
+    h2 {
+        font-size: 1rem;
+        margin-top: 20px;
+          
+
+    }
+    p {
+        font-size: .9rem;
+        font-weight: 200;
+    }
+
+}
+
+.controls {
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.plus,.minus {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 200;
+}
+.minus {
+    font-size: 2rem;
+    position: relative;
+    top: -3px;
+}
+.removeP {
+    position: relative;
+    top: 20px;
+  
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 700;
+}
+
+.cart-btn {
+    width: 100%;
+    height:50px;
+    background: transparent;
+    color: black ;
+    border-color: black;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color .2s ease-in;
+
+    &:hover {
+        background-color: var(--custom-black);
+        color: white;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+
+    .cart {
+        width: 100%;
+        
+    }
+}
