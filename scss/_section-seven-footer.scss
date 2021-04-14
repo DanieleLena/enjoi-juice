@@ -89,7 +89,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 4.5vw;
 
  position: relative;
 top: 30%;
@@ -169,11 +169,16 @@ footer {
         top: 40vh;
         flex-wrap: wrap;
         justify-content: space-around;
+        
+        li {
+            text-align: center;
+        }
     }
     .telephone-container {
         width: 100vw;
         flex: 0 0 80%;
         margin-left: -20%;
+        margin-top: 5vh;
 
        
     }

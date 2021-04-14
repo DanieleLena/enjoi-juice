@@ -183,6 +183,7 @@ body {
   width: 100%;
   height: 110vh;
   margin: auto;
+  position: static;
   color: var(--custom-black);
 }
 
@@ -534,6 +535,7 @@ article:nth-child(1) {
     color: black;
   }
   .main-shop {
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -562,9 +564,54 @@ article:nth-child(1) {
   }
 }
 
+.shop-big-btn {
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 600px) {
   .orange-circle {
     height: 30vh;
+  }
+  .right-main-shop {
+    position: static;
+    height: 100vh;
+  }
+  .right-main-shop p {
+    font-size: .8rem;
+  }
+  .right-main-shop h3 {
+    font-size: .8rem;
+  }
+  .right-main-shop h4 {
+    font-size: .7rem;
+  }
+  .price-container p {
+    font-size: .5rem;
+  }
+  .shop-reviews {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .review-little-circle {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 80%;
+  }
+  .card {
+    width: 30%;
+    height: 25%;
+  }
+  .faq p, .faq h3 {
+    font-size: .5rem;
+    line-height: .6rem;
   }
 }
 /*# sourceMappingURL=shop-page.css.map */

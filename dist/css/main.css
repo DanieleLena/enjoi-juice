@@ -675,7 +675,7 @@ article:nth-child(1) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 3rem;
+  font-size: 4.5vw;
   position: relative;
   top: 30%;
   left: -20%;
@@ -757,12 +757,16 @@ footer li:hover {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  footer li {
+    text-align: center;
+  }
   .telephone-container {
     width: 100vw;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 80%;
             flex: 0 0 80%;
     margin-left: -20%;
+    margin-top: 5vh;
   }
 }
 
