@@ -1,9 +1,13 @@
 
 .section-seven-footer {
     width: 100%;
-     height: 100vh;
-     position: relative;
-     overflow: hidden;
+    height:100vh;
+      position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    
 }
 
 .text-sliding-first-line,
@@ -12,6 +16,7 @@
     white-space: nowrap;
     font-size: 1.5rem;
     font-weight: 700;
+    
 }
 .sliding1 {
     position: absolute;
@@ -25,7 +30,7 @@
   
     transform: translateX(-100%);
      animation: slide-text2-right 100s linear infinite;
-
+    
 }
 
 @keyframes slide-text1-right {
@@ -66,11 +71,13 @@
 
 .call-action-footer {
     width: 100%;
-    height: auto;
-    position: absolute;
-    top: 10vh;
-    z-index: 1;
-    padding-top: 5vw;
+    margin-top: 10vw;
+    display: flex;
+    align-items: center;
+    
+    h1 {
+        position: static;
+    }
 
 }
 
@@ -84,9 +91,9 @@
     align-items: center;
     font-size: 3rem;
 
-    position: absolute;
-    top: 18vw;
-    right: 16vw;
+ position: relative;
+top: 30%;
+ left: -20%;
 
     i {
         width: 100%;
@@ -97,11 +104,9 @@
 
 footer {
     width: 100%;
-    height: 20vh;
-    position: absolute;
-    top: 80vh;
+    
+    bottom: 0%;
     padding: 2.5vw;
-    // font-family: var(--font-rounded);
     z-index: 2;
 
 
@@ -153,4 +158,23 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media screen and (max-width: 800px) {
+
+
+    footer {
+        // flex-direction: column;
+        top: 40vh;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .telephone-container {
+        width: 100vw;
+        flex: 0 0 80%;
+        margin-left: -20%;
+
+       
+    }
 }

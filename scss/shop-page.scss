@@ -176,8 +176,15 @@ body {
 
 
 .faq {
+     width: 100%;
     padding: 10vw;
     margin: auto;
+}
+@media screen and (max-width: 650px) {
+    .faq {
+      width: 100%;
+      padding: 1rem;
+    }
 }
 
 .faq-title {
@@ -350,3 +357,40 @@ article {
 
 }
 
+@media screen and (max-width: 1200px) {
+
+    .burger-menu {
+        color: black;
+    }
+
+    .main-shop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-scene {
+        height: 50%;
+    }
+    .scene {
+         position: static;
+        width: 100%;
+        height: 30vh;
+
+    }
+    .orange-circle {
+        height: 35vh;
+       
+    }
+    .right-main-shop {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .orange-circle {
+        
+        height: 30vh;
+       
+    }
+}

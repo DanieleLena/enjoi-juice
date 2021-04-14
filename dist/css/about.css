@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .shop-about-btn a:nth-child(2) {
@@ -132,6 +133,30 @@ body {
   border-bottom: 2px solid black;
 }
 
+.question-center {
+  font-size: 1.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.line-question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+}
+
+.question-left {
+  width: 100%;
+  margin-right: 2vw;
+}
+
 article {
   border-bottom: 2px solid black;
 }
@@ -174,5 +199,66 @@ article {
 
 .telephone {
   border-color: black;
+}
+
+@media screen and (max-width: 800px) {
+  .who-we-are {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .left-who-we-are {
+    width: 95%;
+  }
+  .right-who-we-are {
+    margin-top: 15vw;
+  }
+  .juice-about-img {
+    width: 60%;
+  }
+  .gummy-img {
+    width: 30%;
+    position: absolute;
+  }
+  .gummy-img:nth-child(2) {
+    top: -5vw;
+    left: 0;
+  }
+  .gummy-img:nth-child(3) {
+    top: 20vw;
+    left: -3vw;
+  }
+  .gummy-img:nth-child(4) {
+    top: -5%;
+    left: 70%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .gummy-img:nth-child(5) {
+    top: 15%;
+    left: 65%;
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  .faq {
+    width: 100%;
+    padding: 1rem;
+  }
+  .oval {
+    height: 60vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .oval h2 {
+    width: 90%;
+  }
+  .oval p {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=about.css.map */

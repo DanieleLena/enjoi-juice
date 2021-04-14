@@ -21,7 +21,7 @@ body {
     width: 100%;
     font-family: sans-serif;
     // overflow: hidden; 
-    //   overflow-x:hidden;
+    overflow-x:hidden;
     background: var(--backgroundTrick);
     // height: 1000vh;
     color: white;
@@ -78,6 +78,8 @@ body {
     font-size: 2rem;
     text-align: center;
 }
+
+//NAV BAR =============================================
 .nav-bar {
     width: 95%;
      margin: auto;
@@ -122,6 +124,9 @@ body {
     align-items: center;
     
 }
+.burger-menu {
+    display: none;
+}
 
 .btn {
     
@@ -139,6 +144,23 @@ body {
 
         }
     
+}
+@media screen and (max-width: 800px) {
+    .logo {
+        img {
+        width: 80%;
+        }
+    }
+    .shop-about-btn {
+      display: none;
+    }
+    .burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+    
+    }
 }
 
 .main-title{

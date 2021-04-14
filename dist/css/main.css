@@ -540,7 +540,17 @@ article:nth-child(1) {
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-x: hidden;
 }
 
 .text-sliding-first-line,
@@ -638,11 +648,17 @@ article:nth-child(1) {
 
 .call-action-footer {
   width: 100%;
-  height: auto;
-  position: absolute;
-  top: 10vh;
-  z-index: 1;
-  padding-top: 5vw;
+  margin-top: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.call-action-footer h1 {
+  position: static;
 }
 
 .arrow-btn {
@@ -660,9 +676,9 @@ article:nth-child(1) {
       -ms-flex-align: center;
           align-items: center;
   font-size: 3rem;
-  position: absolute;
-  top: 18vw;
-  right: 16vw;
+  position: relative;
+  top: 30%;
+  left: -20%;
 }
 
 .arrow-btn i {
@@ -672,9 +688,7 @@ article:nth-child(1) {
 
 footer {
   width: 100%;
-  height: 20vh;
-  position: absolute;
-  top: 80vh;
+  bottom: 0%;
   padding: 2.5vw;
   z-index: 2;
   display: -webkit-box;
@@ -733,6 +747,23 @@ footer li:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    top: 40vh;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .telephone-container {
+    width: 100vw;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
+    margin-left: -20%;
+  }
 }
 
 .cart {
@@ -879,6 +910,7 @@ html {
 body {
   width: 100%;
   font-family: sans-serif;
+  overflow-x: hidden;
   background: var(--backgroundTrick);
   color: white;
 }
@@ -979,6 +1011,10 @@ body {
           align-items: center;
 }
 
+.burger-menu {
+  display: none;
+}
+
 .btn {
   background-color: transparent;
   padding: .5rem 2rem;
@@ -992,6 +1028,27 @@ body {
 .btn:hover {
   background-color: white;
   color: black;
+}
+
+@media screen and (max-width: 800px) {
+  .logo img {
+    width: 80%;
+  }
+  .shop-about-btn {
+    display: none;
+  }
+  .burger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 2rem;
+  }
 }
 
 .main-title {

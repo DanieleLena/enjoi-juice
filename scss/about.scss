@@ -1,5 +1,6 @@
 body {
     width: 100%;
+    overflow-x: hidden;
 }
 .shop-about-btn {
 
@@ -129,6 +130,25 @@ body {
         }
 }
 
+.question-center {
+    
+    font-size: 1.5vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+.line-question {
+    display: flex;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+}
+.question-left{
+    width: 100%;
+    margin-right: 2vw;
+    
+}
+
+
 article {
     border-bottom: 2px solid black;
 }
@@ -175,3 +195,73 @@ li {
 .telephone {
     border-color: black;
 }
+
+
+
+@media screen and (max-width: 800px) {
+
+    .who-we-are {
+        flex-direction: column;
+    }
+    .left-who-we-are {
+        width: 95%;
+    }
+    .right-who-we-are {
+        margin-top: 15vw;
+
+        img {
+            // width: 50%;
+        }
+    }
+    .juice-about-img{
+        width: 60%;
+    }
+    .gummy-img {
+        width: 30%;
+        position: absolute;
+    
+        &:nth-child(2){
+            top: -5vw;
+            left: 0;
+        }
+        &:nth-child(3){
+            top: 20vw;
+            left: -3vw;
+        }
+        &:nth-child(4){
+            top: -5%;
+            left: 70%;
+            transform: rotate(180deg);
+        }
+        &:nth-child(5){
+            top: 15%;
+            left: 65%;
+            filter: blur(5px);
+            transform: rotate(-30deg);
+        }
+    }
+
+   
+        .faq {
+          width: 100%;
+          padding: 1rem;
+        }
+    
+        .oval {
+            
+            height: 60vw;
+            
+            
+            
+            flex-direction: column;
+           
+        
+            h2 {
+                width:90%; 
+            }
+            p {
+                width: 90%;
+            }
+        }
+}
+
