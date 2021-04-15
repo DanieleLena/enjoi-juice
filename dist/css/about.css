@@ -8,6 +8,18 @@ body {
   box-shadow: 0px 9px 0px 0px var(--custom-white);
 }
 
+.mobile-menu li:nth-child(1) {
+  color: white;
+}
+
+.mobile-menu li:nth-child(1):hover {
+  color: black;
+}
+
+.mobile-menu li:nth-child(3) {
+  color: black;
+}
+
 .about-big-title h1 {
   font-size: 13vw;
   line-height: 9.7vw;

@@ -28,6 +28,18 @@ body {
     color: white;
 }
 
+.mobile-menu {
+    li:nth-child(1){
+        color: white;
+    &:hover {
+        color: black;
+    }
+    }
+
+    li:nth-child(2){
+        color: black;
+    }
+}
 
 .main-shop {
     width: 100%;
@@ -390,6 +402,9 @@ article {
         
     }
 }
+.card {
+    height: 55%;
+}
 .shop-big-btn {
     font-size: 1rem;
 }
@@ -434,9 +449,16 @@ article {
         width: 80%;
 
     }
+    .shop-cards {
+        display: flex;
+        flex-direction: column;
+        height: 55vh;
+    }
     .card {
-        width: 30%;
-        height: 25%;
+        width: 100%;
+        height: 30%;
+        font-size: .6rem;
+        margin: 1rem;
     }
 
 .faq {

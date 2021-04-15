@@ -235,7 +235,6 @@ article:nth-child(1) {
 .section-four-sticky-cotainer {
   width: 100%;
   height: 120vh;
-  position: block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -940,12 +939,74 @@ body {
 
 @media screen and (max-width: 800px) {
   .scene {
-    height: 30vh;
+    height: 60vh;
+    top: 10vw;
+    left: 5vw;
   }
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.mobile-menu {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--backgroundTrick);
+  -webkit-transition: -webkit-transform .5s ease-in;
+  transition: -webkit-transform .5s ease-in;
+  transition: transform .5s ease-in;
+  transition: transform .5s ease-in, -webkit-transform .5s ease-in;
+}
+
+.mobile-menu ul {
+  position: absolute;
+  top: 30%;
+  list-style: none;
+  margin-left: 3vw;
+}
+
+.mobile-menu i {
+  position: relative;
+  top: 5%;
+  left: 80%;
+  font-size: 15vw;
+  cursor: pointer;
+}
+
+.mobile-menu i:hover {
+  color: black;
+}
+
+.mobile-menu li {
+  text-transform: uppercase;
+  font-size: 15vw;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mobile-menu li:nth-child(1) {
+  color: black;
+}
+
+.mobile-menu li:hover {
+  color: black;
+}
+
+.hide-mobile-menu {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+@media screen and (max-width: 800px) {
+  .mobile-menu {
+    display: block;
+  }
 }
 
 .landing-page {
@@ -1017,6 +1078,7 @@ body {
 
 .burger-menu {
   display: none;
+  cursor: pointer;
 }
 
 .btn {
@@ -1088,5 +1150,82 @@ body {
   position: relative;
   top: 90vh;
   z-index: -2;
+}
+
+@media screen and (max-width: 600px) {
+  .scene {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 20vh;
+    left: -15%;
+  }
+  .landing-page {
+    height: 70vh;
+  }
+  .section-two {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 60vh;
+  }
+  .section-two-left-side {
+    width: 100%;
+  }
+  .section-two-right-side {
+    position: static;
+    width: 100%;
+    left: 0;
+    font-size: 1rem;
+  }
+  .section-two-right-side p {
+    font-size: 1rem;
+  }
+  .section-two-text-container {
+    width: 100%;
+    margin: 0;
+  }
+  .vertical-line {
+    display: none;
+  }
+  .section-three {
+    height: 30vh;
+  }
+  .section-four {
+    display: none;
+  }
+  .section-five {
+    height: auto;
+    position: static;
+    display: none;
+  }
+  .section-six {
+    height: auto;
+  }
+  .section-six-circle {
+    position: static;
+    border-color: white;
+    color: white;
+    margin: auto;
+  }
+  .section-six-cards-right {
+    width: 100%;
+    position: static;
+    height: 100vh;
+    color: white;
+  }
+  .section-six-cards-left {
+    display: none;
+  }
+  .card {
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -19,7 +19,7 @@ tl.to("body", {background: "var(--custom-white)", scrollTrigger: {
     trigger: ".faq",
      start: "top center",
     // markers: true,
-      end: "top center ",
+      end: "top center ",   
     scrub: 0.01,
     
 }})

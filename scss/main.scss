@@ -62,13 +62,77 @@ body {
 @media screen and (max-width:800px) {
 
     .scene {
-        height: 30vh;
+        height: 60vh;
+        top: 10vw;
+        left: 5vw;
     }
 }
 //SCROLL BAR =========================================
 ::-webkit-scrollbar {
     display: none;    
   }
+
+// MOBILE MENU ======================================
+.mobile-menu {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--backgroundTrick);
+    transition: transform .5s ease-in;
+
+
+    ul {
+        position: absolute;
+        top: 30%;
+        list-style: none;
+        margin-left: 3vw;
+    }
+    i {
+        position: relative;
+        top: 5%;
+        left: 80%;
+        font-size: 15vw;
+        cursor: pointer;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    li {
+        text-transform: uppercase;
+        font-size: 15vw;
+        font-weight: 700;
+        cursor: pointer;
+
+        &:nth-child(1){
+            color: black;
+        }
+
+        &:hover {
+            color: black;
+        }
+    }
+
+}
+
+.hide-mobile-menu{
+
+    transform: translateX(100%);
+
+}
+@media screen and (max-width: 800px) {
+    .mobile-menu {
+        display: block;
+    }
+}
+
+
 
 
 .landing-page {
@@ -126,6 +190,7 @@ body {
 }
 .burger-menu {
     display: none;
+    cursor: pointer;
 }
 
 .btn {
@@ -202,3 +267,84 @@ line-height: 2vw;
 
 
 
+//mobile main page 
+
+@media screen and (max-width:600px) {
+
+    .scene {
+       position: absolute;
+       height: 50%;
+       width: 100%;
+       top: 20vh;
+       left: -15%;
+    }
+
+    .landing-page {
+        height: 70vh;
+    }
+    .section-two {
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+    }
+    .section-two-left-side {
+        width: 100%;
+        
+    }
+    .section-two-right-side {
+        position: static;
+
+        width: 100%;
+        left: 0;
+        font-size: 1rem;
+        p {
+            font-size: 1rem;
+        }
+    }
+    .section-two-text-container {
+        width: 100%;
+        margin: 0;
+    }
+    .vertical-line {
+        display: none;
+    }
+    .section-three {
+        height: 30vh;
+    }
+    .section-four {
+        display: none;
+
+    }
+    .section-five {
+        height: auto;
+        position: static;
+        display: none;
+    }
+    .section-six {
+        height: auto;
+    }
+    .section-six-circle {
+        position: static;
+        border-color: white;
+        color: white;
+        margin: auto;
+    }
+    .section-six-cards-right {
+        width: 100%;
+        position: static;
+        height: 100vh;
+        color: white;
+    }
+    .section-six-cards-left {
+       display: none;
+       
+
+    }
+    .card {
+        background-color: white;
+        color: black;
+        font-size: 1rem;
+        margin: 0;
+
+    }
+}

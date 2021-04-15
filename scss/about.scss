@@ -2,6 +2,7 @@ body {
     width: 100%;
     overflow-x: hidden;
 }
+
 .shop-about-btn {
 
     a:nth-child(2) {
@@ -10,6 +11,18 @@ body {
     }
     }
 
+    .mobile-menu {
+        li:nth-child(1){
+            color: white;
+        &:hover {
+            color: black;
+        }
+        }
+    
+        li:nth-child(3){
+            color: black;
+        }
+    }
 
 .about-big-title {
     

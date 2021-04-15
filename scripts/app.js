@@ -58,6 +58,8 @@ function init(){
         //POSITIONG
         object.position.x = rightsidePosition;
         
+        
+        object.onLoad = console.log("rimuovere preloader on load ");
 
   // SCROLLING ANIMATION
   
@@ -319,7 +321,6 @@ let tl = gsap.timeline()
     });
 
   
-  
    
 }
 
@@ -358,6 +359,7 @@ function onWindowResize(){
 
 }
 window.addEventListener("resize", onWindowResize);
+
 
 
 
