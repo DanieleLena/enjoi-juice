@@ -5,6 +5,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
 let tl = gsap.timeline();
+tl.from(".big-title", { y:500, opacity: 0 , duration: 1 , stagger: .3})
 
 tl.to("body" ,{ease: "power1.inOut",scrollTrigger:{
     trigger: ".faq",

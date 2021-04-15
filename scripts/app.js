@@ -1,4 +1,6 @@
 
+//3D ======================================================================
+
 let container;
 let camera;
 let renderer;
@@ -6,6 +8,7 @@ let scene;
 let object;
 let rightsidePosition = (window.innerWidth *5) / 100;
 let vh = (unit) => window.innerHeight * (unit/100);
+
 
 function init(){
     container = document.querySelector(".scene");   
@@ -59,17 +62,24 @@ function init(){
         object.position.x = rightsidePosition;
         
         
-        object.onLoad = console.log("rimuovere preloader on load ");
+
+      function removePreLoader() {
+        const preloader = document.querySelector(".preloader");
+          preloader.style.display = "none";
+      }  
+        object.onLoad =  removePreLoader();
 
   // SCROLLING ANIMATION
   
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.set("body", {background: "linear-gradient(to left , var(--orange),var(--yellow) )", scrollTrigger: {
-  start: "top top",
-}});
+// gsap.set("body", {background: "linear-gradient(to left , var(--orange),var(--yellow) )", scrollTrigger: {
+//   start: "top top",
+// }});
 
 let tl = gsap.timeline()
+
+tl.from("#gsapAn", {position: "absolute", y:300, opacity: 0 , duration: 1,stagger: 0.3})
 
 .to(object.position,{x: 1, ease: "power1.inOut", scrollTrigger: {
       
@@ -258,7 +268,8 @@ let tl = gsap.timeline()
     start: vh(1051),
      end: vh(1075),
     scrub: 1,
-  }}).from("#zinc4",{ scale: 1.8, opacity: 100, ease: "power1.inOut"})
+  }})
+  .from("#zinc4",{ scale: 1.8, opacity: 100, ease: "power1.inOut"})
   .to("#zinc4",{ scale: 3.5, opacity: 0, ease: "power1.inOut", scrollTrigger: {
       
     start: vh(1076),
@@ -280,7 +291,7 @@ let tl = gsap.timeline()
 //"linear-gradient(to left , var(--orange),var(--yellow) )"
   //CHANGE BODY BACKGROUND BACK TO ORANGE GRADIENT ===============================================================
   let tl2 = gsap.timeline()
-  .from("body",{ background: "linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4)", ease: "none"})
+  // .from("body",{ background: "linear-gradient(95deg, #e2e8f0, #fff, #FFFCF4)", ease: "none"})
   .to("body",{background:"linear-gradient(to left , var(--orange),var(--yellow) )",  ease: "none", scrollTrigger: {
       
     start: vh(1320),
