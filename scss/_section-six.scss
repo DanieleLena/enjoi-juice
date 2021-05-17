@@ -1,137 +1,123 @@
-
-
 .section-six {
-    width: 100%;
-    height: 250vh;
-    color: black;
-    position: static;
-    
+  width: 100%;
+  height: 250vh;
+  color: black;
+  position: static;
 }
 
 //MEDIA QUERY =========================================================================
 // 24inch
-@media screen and (min-width:1550px) {
-    .section-six {
-        height: 200vh;
-    }
+@media screen and (min-width: 1550px) {
+  .section-six {
+    height: 200vh;
+  }
 }
 //20inch
-@media screen and (min-width:1800px) {
-
-    .section-six {
-        height: 200vh;
-    }
+@media screen and (min-width: 1800px) {
+  .section-six {
+    height: 200vh;
+  }
 }
 //tablet
-@media screen and (max-width:800px) {
-
-    .section-six {
-        height: 30vh;
-    }
+@media screen and (max-width: 800px) {
+  .section-six {
+    height: 30vh;
+  }
 }
 
 .section-six-circle {
-    
-        width: 50vw;
-        height: 50vw;
-        position: absolute;
-        border-radius: 50%;
-        border: 3px solid orange;
-        color: var(--custom-black);
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: -2;
-        
-        p {
-            width: 50%;
-            height: 50%;
-            font-size: 4.5vw;
-            margin-left: 6vw;
-            text-transform: uppercase;
-        }
-    
+  width: 50vw;
+  height: 50vw;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid orange;
+  color: var(--custom-black);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+
+  p {
+    width: 50%;
+    height: 50%;
+    font-size: 4.5vw;
+    margin-left: 6vw;
+    text-transform: uppercase;
+  }
 }
 .section-six-cards-left {
-    width: 40%;
-    // float: left;
-    position: relative;
-    top: 120vh;
-    padding-left: 7vw;
-    
-
+  width: 40%;
+  // float: left;
+  position: relative;
+  top: 120vh;
+  padding-left: 7vw;
 }
 .section-six-cards-right {
-    width: 40%;
-    height: 150vh;
-    float: right;
-    padding-left: 7vw;
-    
-    
+  width: 40%;
+  height: 150vh;
+  float: right;
+  padding-left: 7vw;
 }
 .reviews-title {
-    text-align: left;
-    margin-bottom: 10vh;
+  text-align: left;
+  margin-bottom: 10vh;
 
-    h3 {
-        font-size: 3vw;
-    }
-    p {
-        font-family: var(--font-rounded);
-    }
+  h3 {
+    font-size: 3vw;
+  }
+  p {
+    font-family: var(--font-rounded);
+  }
 }
 .card {
-    width: 65%;
-    // height: 20%;
-    border: 3px solid orange;
-    border-radius: 10px;
-    font-size: 1.4vw;
-    margin-bottom: 10vh;
-    
+  width: 65%;
+  // height: 20%;
+  border: 3px solid orange;
+  border-radius: 10px;
+  font-size: 1.4vw;
+  margin-bottom: 10vh;
 }
 .card-top {
-    width: 100%;
-    height: 70%;
-    border-bottom: 3px solid orange;
-    padding: 20px;
+  width: 100%;
+  height: 70%;
+  border-bottom: 3px solid orange;
+  padding: 20px;
 }
 .stars {
-    width: 100%;
-    font-size: 1.2vw;
-    margin-bottom: 30px;
-    letter-spacing: 0.4rem;
+  width: 100%;
+  font-size: 1.2vw;
+  margin-bottom: 30px;
+  letter-spacing: 0.4rem;
 
-    span {
-        color: transparent;
-        -webkit-text-stroke: black 1px;
-    }
+  span {
+    color: transparent;
+    -webkit-text-stroke: black 1px;
+  }
 }
 .card-bottom {
-    display: flex;
-    padding: 15px;
+  display: flex;
+  padding: 15px;
 }
 .profile-img {
-    width: 2.2vw;
-    background-color: var(--custom-black);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1vw;
+  width: 2.2vw;
+  background-color: var(--custom-black);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1vw;
 }
 .card:nth-child(1) {
-    transform:  rotate(8deg);
-    
+  transform: rotate(8deg);
 }
 .card:nth-child(2) {
-    transform: translateX(5px) rotate(-5deg);
-    
+  transform: translateX(5px) rotate(-5deg);
 }
 .card:nth-child(3) {
-    transform: translateX(35px) rotate(1deg);
+  transform: translateX(35px) rotate(1deg);
 }
 .card:nth-child(4) {
-    transform:  rotate(-6deg);
+  transform: rotate(-6deg);
 }

@@ -1,77 +1,68 @@
-
-
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 *:focus {
-    outline: none;
-    border-bottom: 2px solid rgb(100, 14, 100);
+  outline: none;
+  border-bottom: 2px solid rgb(100, 14, 100);
 }
 :root {
-    --orange : #F37335;
-    --yellow: #FDC830;
-    --custom-white:#FFFCF4;
-    --custom-black: #0D0D0D;
-    --gradient: 
-    linear-gradient(to left , var(--orange),var(--yellow) );  /* Chrome 10-25, Safari 5.1-6 */
-    --backgroundTrick: var(--gradient);
-    --font-rounded:'M PLUS Rounded 1c', sans-serif;
-
-     
+  --orange: #f37335;
+  --yellow: #fdc830;
+  --custom-white: #fffcf4;
+  --custom-black: #0d0d0d;
+  --gradient: linear-gradient(
+    to left,
+    var(--orange),
+    var(--yellow)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  --backgroundTrick: var(--gradient);
+  --font-rounded: "M PLUS Rounded 1c", sans-serif;
 }
 
 a:link,
-a:visited ,
-a:hover ,
+a:visited,
+a:hover,
 a:active {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
-
 
 // the WHITE BUTTON
 
 .btn {
-    
-    background-color: transparent;
-    padding: .5rem 2rem;
-    font-size: 1.3rem;
-    border: 2px solid white;
-    border-radius: 30px;
-    color: white;
-    cursor: pointer;
-    transition: background-color .5s;
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  font-size: 1.3rem;
+  border: 2px solid white;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s;
 
-    &:hover {
-        background-color: white;
-        color: black;
-
-    }
-
-}   
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
 
 .big-title {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  left: 0;
+  font-size: 13.9vw;
+  padding-left: 2vw;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 11vw;
+  letter-spacing: -1vw;
+  font-weight: 600;
+  z-index: -2;
 
-    width: 100%;
-    height: 80%;
-    position: absolute;
-    left: 0;
-    font-size: 13.9vw;
-    padding-left: 2vw;
-    text-transform: uppercase;
-    text-align: left;
-    line-height:11vw;
-    letter-spacing: -1vw;
-    font-weight: 600;
-    z-index: -2;
-
-span {
+  span {
     font-family: var(--font-rounded);
     position: absolute;
     top: 15vw;
@@ -79,87 +70,77 @@ span {
     font-size: 1vw;
     line-height: 1vw;
     letter-spacing: 0;
+  }
 }
-}
-
 
 // FAQ  SECTION==========================================================================
 
-
 .faq {
-    padding: 10vw;
-    margin: auto;
+  padding: 10vw;
+  margin: auto;
 }
 
 .faq-title {
-    font-size: 10vw;
-    margin-left: 2vw;
-    text-transform: uppercase;
-    text-align: left;
-    letter-spacing: -1vw;
-    font-weight: 800;
-    line-height: 11vw;
-   
+  font-size: 10vw;
+  margin-left: 2vw;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: -1vw;
+  font-weight: 800;
+  line-height: 11vw;
 
-    span {
-        position: absolute;
-        width:300px;
-        font-size: 2vw;
-        line-height: 2vw;
-        letter-spacing: 0;
-        position: block;
-        left: 0;
-        margin-top: 6.5vw;
-        margin-left: 14vw;
-    }
-
- 
+  span {
+    position: absolute;
+    width: 300px;
+    font-size: 2vw;
+    line-height: 2vw;
+    letter-spacing: 0;
+    position: block;
+    left: 0;
+    margin-top: 6.5vw;
+    margin-left: 14vw;
+  }
 }
 
-
-
 article {
+  border-bottom: 2px solid white;
 
-    border-bottom: 2px solid white;
-
-
-    &:nth-child(1)  {
-        border-top: 2px solid white;
-         margin-top: 5vw;
-    }
+  &:nth-child(1) {
+    border-top: 2px solid white;
+    margin-top: 5vw;
+  }
 }
 
 .question-title {
-    display: flex;
-    justify-content: space-between;
-    font-size: 3vw;
-    line-height: 6vw;
-    text-transform: uppercase;
-    // margin-top: 1.5vw;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 3vw;
+  line-height: 6vw;
+  text-transform: uppercase;
+  // margin-top: 1.5vw;
+  cursor: pointer;
 
-    i {
-        font-size: 5vw;
-        transition: transform .2s ease-in;
-    }
-
+  i {
+    font-size: 5vw;
+    transition: transform 0.2s ease-in;
+  }
 }
 
 .rotate-icon {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .question-center {
-     display: flex;
-    font-family: var(--font-rounded);
-    font-size: 1vw;
-    line-height: 1.5vw;
-    transition:  max-height  .5s ease-in;
-    overflow: hidden;
+  display: flex;
+  font-family: var(--font-rounded);
+  font-size: 1vw;
+  line-height: 1.5vw;
+  transition: max-height 0.5s ease-in;
+  overflow: hidden;
 
-     max-height: 0; //TO HIDE AND OPEN WITH JS
+  max-height: 0; //TO HIDE AND OPEN WITH JS
 }
 
-.show-text{
-    max-height: 1000px;
+.show-text {
+  max-height: 1000px;
 }
