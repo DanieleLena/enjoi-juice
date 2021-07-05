@@ -11,15 +11,18 @@
 }
 
 :root {
-  --orange: #F37335;
-  --yellow: #FDC830;
-  --custom-white:#FFFCF4;
-  --custom-black: #0D0D0D;
-  --gradient: 
-    linear-gradient(to left , var(--orange),var(--yellow) );
+  --orange: #f37335;
+  --yellow: #fdc830;
+  --custom-white: #fffcf4;
+  --custom-black: #0d0d0d;
+  --gradient: linear-gradient(
+    to left,
+    var(--orange),
+    var(--yellow)
+  );
   /* Chrome 10-25, Safari 5.1-6 */
   --backgroundTrick: var(--gradient);
-  --font-rounded:'M PLUS Rounded 1c', sans-serif;
+  --font-rounded: "M PLUS Rounded 1c", sans-serif;
 }
 
 a:link,
@@ -32,14 +35,14 @@ a:active {
 
 .btn {
   background-color: transparent;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 1.3rem;
   border: 2px solid white;
   border-radius: 30px;
   color: white;
   cursor: pointer;
-  -webkit-transition: background-color .5s;
-  transition: background-color .5s;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .btn:hover {
@@ -123,10 +126,10 @@ article:nth-child(1) {
 
 .question-title i {
   font-size: 5vw;
-  -webkit-transition: -webkit-transform .2s ease-in;
-  transition: -webkit-transform .2s ease-in;
-  transition: transform .2s ease-in;
-  transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 
 .rotate-icon {
@@ -141,8 +144,8 @@ article:nth-child(1) {
   font-family: var(--font-rounded);
   font-size: 1vw;
   line-height: 1.5vw;
-  -webkit-transition: max-height  .5s ease-in;
-  transition: max-height  .5s ease-in;
+  -webkit-transition: max-height 0.5s ease-in;
+  transition: max-height 0.5s ease-in;
   overflow: hidden;
   max-height: 0;
 }
@@ -260,8 +263,8 @@ body {
   border-radius: 20px;
   margin: 1rem 0;
   cursor: pointer;
-  -webkit-transition: .2s all ease-out;
-  transition: .2s all ease-out;
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
 }
 
 .active-box {
@@ -322,7 +325,7 @@ body {
 .shop-big-btn {
   width: 90%;
   height: 3rem;
-  background: #A6A6A6;
+  background: #a6a6a6;
   color: white;
   font-family: var(--font-rounded);
   font-size: 1.2vw;
@@ -337,8 +340,8 @@ body {
 }
 
 .hover-big-btn {
-  background: -webkit-gradient(linear, left top, right top, from(#4A00E0), to(#8E2DE2));
-  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  background: -webkit-gradient(linear, left top, right top, from(#4a00e0), to(#8e2de2));
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
 }
 
 .faq {
@@ -400,10 +403,10 @@ article:nth-child(1) {
 
 .question-title i {
   font-size: 5vw;
-  -webkit-transition: -webkit-transform .2s ease-in;
-  transition: -webkit-transform .2s ease-in;
-  transition: transform .2s ease-in;
-  transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 
 .rotate-icon {
@@ -418,8 +421,8 @@ article:nth-child(1) {
   font-family: var(--font-rounded);
   font-size: 1vw;
   line-height: 1.5vw;
-  -webkit-transition: max-height  .5s ease-in;
-  transition: max-height  .5s ease-in;
+  -webkit-transition: max-height 0.5s ease-in;
+  transition: max-height 0.5s ease-in;
   overflow: hidden;
   max-height: 0;
 }
@@ -593,16 +596,16 @@ article:nth-child(1) {
     height: 100vh;
   }
   .right-main-shop p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .right-main-shop h3 {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
   .right-main-shop h4 {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
   .price-container p {
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
   .shop-reviews {
     display: -webkit-box;
@@ -634,12 +637,13 @@ article:nth-child(1) {
   .card {
     width: 100%;
     height: 30%;
-    font-size: .6rem;
+    font-size: 0.6rem;
     margin: 1rem;
   }
-  .faq p, .faq h3 {
-    font-size: .5rem;
-    line-height: .6rem;
+  .faq p,
+  .faq h3 {
+    font-size: 0.5rem;
+    line-height: 0.6rem;
   }
 }
 /*# sourceMappingURL=shop-page.css.map */

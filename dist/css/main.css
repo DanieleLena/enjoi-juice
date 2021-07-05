@@ -11,15 +11,18 @@
 }
 
 :root {
-  --orange: #F37335;
-  --yellow: #FDC830;
-  --custom-white:#FFFCF4;
-  --custom-black: #0D0D0D;
-  --gradient: 
-    linear-gradient(to left , var(--orange),var(--yellow) );
+  --orange: #f37335;
+  --yellow: #fdc830;
+  --custom-white: #fffcf4;
+  --custom-black: #0d0d0d;
+  --gradient: linear-gradient(
+    to left,
+    var(--orange),
+    var(--yellow)
+  );
   /* Chrome 10-25, Safari 5.1-6 */
   --backgroundTrick: var(--gradient);
-  --font-rounded:'M PLUS Rounded 1c', sans-serif;
+  --font-rounded: "M PLUS Rounded 1c", sans-serif;
 }
 
 a:link,
@@ -32,14 +35,14 @@ a:active {
 
 .btn {
   background-color: transparent;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 1.3rem;
   border: 2px solid white;
   border-radius: 30px;
   color: white;
   cursor: pointer;
-  -webkit-transition: background-color .5s;
-  transition: background-color .5s;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .btn:hover {
@@ -123,10 +126,10 @@ article:nth-child(1) {
 
 .question-title i {
   font-size: 5vw;
-  -webkit-transition: -webkit-transform .2s ease-in;
-  transition: -webkit-transform .2s ease-in;
-  transition: transform .2s ease-in;
-  transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
 }
 
 .rotate-icon {
@@ -141,8 +144,8 @@ article:nth-child(1) {
   font-family: var(--font-rounded);
   font-size: 1vw;
   line-height: 1.5vw;
-  -webkit-transition: max-height  .5s ease-in;
-  transition: max-height  .5s ease-in;
+  -webkit-transition: max-height 0.5s ease-in;
+  transition: max-height 0.5s ease-in;
   overflow: hidden;
   max-height: 0;
 }
@@ -219,6 +222,16 @@ article:nth-child(1) {
   margin-bottom: 15px;
 }
 
+@media (max-width: 600px) {
+  .circle p {
+    width: 35%;
+    height: 30%;
+    font-size: 5vw;
+    margin-left: 6vw;
+    text-transform: uppercase;
+  }
+}
+
 .section-three {
   width: 100%;
   height: 80vh;
@@ -261,7 +274,8 @@ article:nth-child(1) {
   letter-spacing: -0.3vw;
 }
 
-.section-four-text-left span:nth-child(2), .section-four-text-left span:nth-child(3) {
+.section-four-text-left span:nth-child(2),
+.section-four-text-left span:nth-child(3) {
   color: transparent;
   -webkit-text-stroke: 1px white;
 }
@@ -291,10 +305,11 @@ article:nth-child(1) {
 .section-four-text-right p {
   margin-top: 15px;
   font-family: var(--font-rounded);
-  font-size: .8vw;
+  font-size: 0.8vw;
 }
 
-.orange-text span:nth-child(1), .orange-text span:nth-child(3) {
+.orange-text span:nth-child(1),
+.orange-text span:nth-child(3) {
   color: transparent;
   -webkit-text-stroke: 1px white;
 }
@@ -311,7 +326,8 @@ article:nth-child(1) {
   border-bottom: 1px solid black;
 }
 
-.zinc-text span:nth-child(1), .zinc-text span:nth-child(2) {
+.zinc-text span:nth-child(1),
+.zinc-text span:nth-child(2) {
   color: transparent;
   -webkit-text-stroke: 1px black;
 }
@@ -708,8 +724,8 @@ footer li {
 }
 
 footer li:hover {
-  -webkit-box-shadow: 0px 9px 0px 0px #FFFFFF;
-  box-shadow: 0px 5px 0px 0px #FFFFFF;
+  -webkit-box-shadow: 0px 9px 0px 0px #ffffff;
+  box-shadow: 0px 5px 0px 0px #ffffff;
 }
 
 .logo-footer {
@@ -733,7 +749,7 @@ footer li:hover {
 .telephone {
   border: 3px solid white;
   border-radius: 10px;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   height: 4rem;
   font-size: 1.5rem;
   font-weight: 700;
@@ -780,8 +796,8 @@ footer li:hover {
   color: var(--custom-black);
   padding: 2vw;
   font-family: var(--font-rounded);
-  -webkit-transition: right .6s ease-in;
-  transition: right .6s ease-in;
+  -webkit-transition: right 0.6s ease-in;
+  transition: right 0.6s ease-in;
   display: none;
   z-index: 1000;
 }
@@ -829,7 +845,7 @@ footer li:hover {
 }
 
 .right-side-cart p {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 200;
 }
 
@@ -849,7 +865,8 @@ footer li:hover {
   margin-top: 10px;
 }
 
-.plus, .minus {
+.plus,
+.minus {
   background-color: transparent;
   border: none;
   font-size: 1.5rem;
@@ -891,8 +908,8 @@ footer li:hover {
   margin-top: 20px;
   font-size: 1rem;
   cursor: pointer;
-  -webkit-transition: background-color .2s ease-in;
-  transition: background-color .2s ease-in;
+  -webkit-transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in;
 }
 
 .cart-btn:hover {
@@ -984,10 +1001,10 @@ body {
   right: 0;
   z-index: 100;
   background: var(--backgroundTrick);
-  -webkit-transition: -webkit-transform .5s ease-in;
-  transition: -webkit-transform .5s ease-in;
-  transition: transform .5s ease-in;
-  transition: transform .5s ease-in, -webkit-transform .5s ease-in;
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
 }
 
 .mobile-menu ul {
@@ -1072,7 +1089,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 2px solid white;
   border-radius: 10px;
   text-transform: uppercase;
@@ -1085,8 +1102,8 @@ body {
 }
 
 .shop-about-btn a:hover {
-  -webkit-box-shadow: 0px 9px 0px 0px #FFFFFF;
-  box-shadow: 0px 9px 0px 0px #FFFFFF;
+  -webkit-box-shadow: 0px 9px 0px 0px #ffffff;
+  box-shadow: 0px 9px 0px 0px #ffffff;
 }
 
 .cart-btn-container {
@@ -1109,7 +1126,7 @@ body {
 
 .btn {
   background-color: transparent;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 1.3rem;
   border: 2px solid white;
   border-radius: 30px;
@@ -1185,6 +1202,9 @@ body {
     width: 100%;
     top: 20vh;
     left: -15%;
+  }
+  .main-subtitle {
+    display: none;
   }
   .landing-page {
     height: 70vh;
