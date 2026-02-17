@@ -39,61 +39,57 @@ function init() {
 
   //Load model
   let loader = new THREE.GLTFLoader();
-  // loader.load("3d/Juice/scene.gltf", function(gltf){
 
-  loader.load(
-    "https://enjoi-juice-l8to8b8il-lennyman.vercel.app/3D/Juice/scene.gltf",
-    function (gltf) {
-      scene.add(gltf.scene);
+  loader.load("/3D/Juice/scene.gltf", function (gltf) {
+    scene.add(gltf.scene);
 
-      object = gltf.scene.children[0];
-      animate();
+    object = gltf.scene.children[0];
+    animate();
 
-      object.rotation.y = "0.5";
-      object.rotation.z = "-0.3";
+    object.rotation.y = "0.5";
+    object.rotation.z = "-0.3";
 
-      //GSAP
+    //GSAP
 
-      gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-      let tl = gsap.timeline();
+    let tl = gsap.timeline();
 
-      tl.to("body", {
-        background: "linear-gradient(to left , var(--orange),var(--yellow) )",
-        ease: "power1.inOut",
+    tl.to("body", {
+      background: "linear-gradient(to left , var(--orange),var(--yellow) )",
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".faq",
+        start: "top center",
+        end: "top center ",
+        scrub: true,
+      },
+    }).to(object.rotation, {
+      z: 1,
+      scrollTrigger: {
+        start: "top top",
+        end: "800",
+        scrub: 1,
+      },
+    });
+    // CARDS HORIZZONTAL PARALLAX
+
+    gsap.utils.toArray(".card").forEach((card) => {
+      const speed = card.dataset.speed * 20;
+
+      tl.to(card, {
+        x: `${speed}`,
+        ease: "none",
         scrollTrigger: {
-          trigger: ".faq",
-          start: "top center",
-          end: "top center ",
-          scrub: true,
-        },
-      }).to(object.rotation, {
-        z: 1,
-        scrollTrigger: {
+          trigger: ".shop-reviews",
+
           start: "top top",
-          end: "800",
+          end: "bottom top",
           scrub: 1,
         },
       });
-      // CARDS HORIZZONTAL PARALLAX
-
-      gsap.utils.toArray(".card").forEach((card) => {
-        const speed = card.dataset.speed * 20;
-
-        tl.to(card, {
-          x: `${speed}`,
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".shop-reviews",
-
-            start: "top top",
-            end: "bottom top",
-            scrub: 1,
-          },
-        });
-      });
-    }
-  );
+    });
+  });
 }
 
 function animate() {
