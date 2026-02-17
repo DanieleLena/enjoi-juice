@@ -40,7 +40,7 @@ function init() {
   //Load model
   let loader = new THREE.GLTFLoader();
 
-  loader.load("/3D/Juice/scene.gltf", function (gltf) {
+  loader.load("/Juice/scene.gltf", function (gltf) {
     scene.add(gltf.scene);
 
     object = gltf.scene.children[0];
